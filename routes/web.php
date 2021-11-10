@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::get('/',function(){
     return'welcome';
 });
 
-Route::get('r1',function(){
+/*Route::get('r1',function(){
     return redirect('r2');
 });
 
@@ -48,5 +48,5 @@ Route::group(['prefix '=> 'admin'],function(){
     });
 });
 
-Route::get('home',[HomeController::class,'index'])->name('index');
+Route::get('home',[HomeController::class,'index'])->name('index');*/
 
