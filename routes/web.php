@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/',function(){
+/*Route::get('/',function(){
     return'welcome';
 });
 
@@ -28,15 +28,16 @@ Route::get('r1',function(){
 
 Route::get('r2',function(){
     return'welcome';
-});
-
-Route::get('hello/{name}',function($name){
-    return'Hello,'.$name;
 });*/
 
-Route::get('hello/{name?}',['as'=> 'hello.index',function($name='Everybody'){
+Route::get('hello/{name?}',function($name='Everybody'){
+    return'Hello,'.$name;
+})->name('hello.index');
+
+/*Route::get('hello/{name?}',['as'=> 'hello.index',function($name='Everybody'){
 return'Hello,'.$name;
 }]);
+
 
 /*Route::get('dashboard',function(){
     return'dashboard';
@@ -48,5 +49,5 @@ Route::group(['prefix '=> 'admin'],function(){
     });
 });
 
-Route::get('home',[HomeController::class,'index'])->name('index');*/
+Route::get('home',[HomeController::class,'index'])*/
 
